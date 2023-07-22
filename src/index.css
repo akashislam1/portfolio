@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  @apply text-cyan-400;
+}
+
+.animated_Link {
+  @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-cyan-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center hover:text-cyan-400;
+}
+
+.text-animate {
+  @apply bg-gradient-to-r from-cyan-300 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient;
+}
+
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate;
+  animation: animatedgradient 6s ease infinite alternate;
+}
+
+@-webkit-keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #22d3ee !important;
+  z-index: 100 !important;
+}
+.swiper-pagination-bullet {
+  background-color: #00ddff !important;
+}
+.card-shadows {
+  border-radius: 12px 12px;
+  -webkit-box-shadow: 2px 2px 1px #82baba, -1px -1px 7px cyan;
+  box-shadow: 2px 2px 1px #82baba, -1px -1px 7px cyan;
+}
